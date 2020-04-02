@@ -5,7 +5,6 @@ class Menu:
         self.name = n
         self.price = p
 
-
 class Kiosk:
 
     def __init__(self, mlist):
@@ -42,8 +41,10 @@ class MainKiosk:
 
         def service(self):
             print(self.kiosks)
-            idx = int(input("0 or 1"))
+            idx = int(input("아이스크림 메뉴는 0, 파스타 메뉴는 1을 입력하세요 : \n"))
             kiosk = self.kiosks[idx]
+            kiosk.start_service()
+            kiosk.print_bill()
 
 
 kiosk1 = Kiosk([Menu('딸기맛', 3000),Menu('초코맛', 3000),
@@ -54,7 +55,3 @@ kiosk2 = Kiosk([Menu('봉골레', 12000), Menu('까르보나라', 10000),
 
 mainKiosk = MainKiosk([kiosk1, kiosk2])
 mainKiosk.service()
-
-
-kiosk.start_service()
-kiosk.print_bill()
