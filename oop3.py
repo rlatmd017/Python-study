@@ -1,4 +1,4 @@
-
+# 먼저 명사(Menu)를 설정
 class Menu:
 
     def __init__(self, n, p):
@@ -22,7 +22,7 @@ class Kiosk:
 
         if choice == 0:
             return
-        self.order_list.append(self.menu_list[choice -1])
+        self.order_list.append(self.menu_list[choice - 1])
         self.start_service()
 
     def print_bill(self):
