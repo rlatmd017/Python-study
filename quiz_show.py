@@ -9,15 +9,15 @@ class Quiz:
 class QuizManager:
 
     def __init__(self):
-        q1 = Quiz("다수의 선택은 대부분 옳다.")
-        q2 = Quiz("귀가 얇아 선택이 가장 어렵다.")
-        q3 = Quiz("물건을 살 때 실물을 직접 살펴봐야 한다.")
-        q4 = Quiz("옷이든 가구든 세트로 맞추는 것을 좋아한다.")
-        q5 = Quiz("비싼건 그만한 가치가 있다고 생각한다.")
-        q6 = Quiz("유명 브랜드라도 모든 제품이 다 좋진않다.")
-        q7 = Quiz("쇼핑은 30분 만에 끝낸다.")
-        q8 = Quiz("제품을 하나씩 택배로 받는 재미가 쏠쏠하다.")
-        q9 = Quiz("하나를 사더라도 모든 제품을 비교해 봐야 직성이 풀린다.")
+        q1 = Quiz("다수의 선택은 대부분 옳다. y or n")
+        q2 = Quiz("귀가 얇아 선택이 가장 어렵다. y or n")
+        q3 = Quiz("물건을 살 때 실물을 직접 살펴봐야 한다. y or n")
+        q4 = Quiz("옷이든 가구든 세트로 맞추는 것을 좋아한다. y or n")
+        q5 = Quiz("비싼건 그만한 가치가 있다고 생각한다. y or n")
+        q6 = Quiz("유명 브랜드라도 모든 제품이 다 좋진않다. y or n")
+        q7 = Quiz("쇼핑은 30분 만에 끝낸다. y or n")
+        q8 = Quiz("제품을 하나씩 택배로 받는 재미가 쏠쏠하다. y or n")
+        q9 = Quiz("하나를 사더라도 모든 제품을 비교해 봐야 직성이 풀린다. y or n")
         finish1 = Quiz("A타입")
         finish2 = Quiz("B타입")
 
@@ -47,13 +47,14 @@ class QuizManager:
 
 class QuizUI:
 
+    print(" 심리 테스트 : 당신의 소비 스타일은 어떤 스타일일까요? \n 질문에 대하여 y or n로 대답해주세요")
     def __init__(self):
         service = QuizManager()
         self.startGame(service.getFirstQuiz())
 
     def startGame(self, quiz):
 
-        if quiz ==  or :
+        if quiz == None:
             print("THE END")
             return
 

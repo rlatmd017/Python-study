@@ -7,7 +7,6 @@ class Dice:
     def roll(self):
         return random.randrange(1,7)
 
-
 class Player:
     def __init__(self,name):
         self.name = name
@@ -18,8 +17,6 @@ class Tile:
     def __init__(self, number):
         self.num = number
         self.link = 0
-
-
 
 class GameBoard:
 
@@ -51,9 +48,6 @@ class GameBoard:
 
         #print("DEBUG", p.name, p.position)
         return visit_tiles
-
-
-
 
 class GameUI:
 
@@ -87,8 +81,6 @@ class GameUI:
             if visit_result[0].link != 0:
                 print("앗!!! 이동해야 합니다. ")
                 print("Tile: ", visit_result[1].num, "이동했습니다.")
-
-
 
 ui = GameUI()
 ui.makePlayers()
